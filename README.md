@@ -12,24 +12,24 @@
 # Instructions
 
 ## Iteration 0 - Setup
-Setup the application with nodemon, the proper db connection file and function, dotenv, .gitignore and express listening call. x
+Setup the application with nodemon, the proper db connection file and function, dotenv, .gitignore and express listening call.
 
 ## Iteration 1 - Create User model
 
 - **name** - Type `String`. It should be required.
 - **email** - Type `String`, It should be required, and you can use match to setting only valid emails
 - **birthDate** - Type `Date`, it should be required
-- **timestamps** - use timstamps config of mongoose
+- **timestamps** - use timetamps config of mongoose
 
 ## Iteration 2 - Create the Toys Router
 
-- Create a routes directory and a Toys.routes.js file inside it. 
+- Create a routes directory and a toys.routes.js file inside it. 
 - Refactor the code provided on app.js and migrate all the Toys related routes to the newly created router. 
 - Import the newly created router on the app.js file and test all the routes making shure they all work.
 
 ## Iteration 3 - Create the Users Router
 
-- Create a Users.routes.js file inside the routes directory. 
+- Create a users.routes.js file inside the routes directory. 
 - Create all the routes needed to a full Users CRUD
 - Import the newly created router on the app.js file and test all the routes making shure they all work.
 
