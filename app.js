@@ -1,8 +1,17 @@
 import express from 'express'
 import Toy from './models/Toy.model.js'
+import dotenv from 'dotenv/config'
+import connectDB from './config/db.connection.js'
+import userRouter from './routes/user.routes.js'
+import cors from 'cors'
+import UserModel from './models/User.model.js'
 
 
 const app = express()
+connectDB()
+app.use(cors())
+app.use(express.json())
+app.use(userRouter)
 
 
 app.get('/', (req, res) => {
@@ -68,3 +77,5 @@ app.delete('/toys/:id', async (req, res) => {
         return res.status(500).json({message: 'Internal Server Error'})
     }
 })
+
+app.listen(process.env.PORT, () => console.log('Server listening on port: ', process.env.PORT))
